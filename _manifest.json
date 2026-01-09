@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "name": "思考插件",
+  "version": "1.0.0",
+  "description": "帮助推理能力弱的模型更好地对逻辑内容进行推理，相比于thinking模型更快，且推理是可选的",
+  "author": {
+    "name": "mmmpipi",
+    "url": "https://github.com/mmmpipi"
+  },
+  "license": "GPL-v3.0-or-later",
+  "host_application": {
+    "min_version": "0.12.1"
+  },
+  "homepage_url": "https://github.com/mmmpipi/MaiBot-DetailedReason-Plugin",
+  "repository_url": "https://github.com/mmmpipi/MaiBot-DetailedReason-Plugin",
+  "keywords": [
+    "reason"
+  ],
+  "categories": [
+    "Communication"
+  ],
+  "default_locale": "zh-CN",
+  "locales_path": "_locales",
+  "plugin_info": {
+    "is_built_in": false,
+    "plugin_type": "communication",
+    "components": [
+      {
+        "type": "tool",
+        "name": "detailed_reason_tool",
+        "description": "供 LLM 调用的推理工具"
+      }
+    ]
+  },
+  "id": "mmmpipi.MaiBot-DetailedReason-Plugin"
+}
