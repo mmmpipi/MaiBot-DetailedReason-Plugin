@@ -19,7 +19,7 @@ class DetailedReasonTool(BaseTool):
     """详细推理工具"""
 
     name = "detailed_reason_tool"
-    description = "当内容出现需要逻辑推理内容或脑筋急转弯时使用此工具。"
+    description = "当内容出现需要逻辑推理内容时使用此工具。"
     parameters = [
         ("question", ToolParamType.STRING, "要推理的主要问题或内容", True, None),
         ("context", ToolParamType.STRING, "相关的上下文信息（可选）", False, None),
