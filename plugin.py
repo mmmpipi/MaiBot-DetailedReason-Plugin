@@ -36,7 +36,7 @@ class DetailedReasonTool(BaseTool):
 
         try:
             models = llm_api.get_available_models()
-            task_cfg = models.get(self.get_config("plugin.use_model"))
+            task_cfg = models.get(self.get_config("reason.use_model"))
             if not task_cfg:
                 logger.warning("模型配置不可用")
                 return {"name": self.name, "content": "模型配置不可用"}
@@ -74,6 +74,7 @@ class DetailedReasonPlugin(BasePlugin):
     # 配置节描述
     config_section_descriptions = {
         "plugin": "插件基本信息",
+        "reason": "思考配置",
     }
 
     # 配置Schema定义
@@ -83,6 +84,8 @@ class DetailedReasonPlugin(BasePlugin):
             "version": ConfigField(type=str, default="1.0.0", description="插件版本"),
             "config_version": ConfigField(type=str, default="1.0.0", description="配置文件版本"),
             "enabled": ConfigField(type=bool, default=True, description="是否启用插件"),
+        },
+        "reason": {
             "use_model": ConfigField(type=str, default="replyer", description="使用的模型"),
         },
     }
