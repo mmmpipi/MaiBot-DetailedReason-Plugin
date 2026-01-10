@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "思考插件",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "帮助推理能力弱的模型更好地对逻辑内容进行推理，相比于thinking模型更快，且推理是可选的",
   "author": {
     "name": "mmmpipi",
